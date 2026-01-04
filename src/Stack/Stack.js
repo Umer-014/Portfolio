@@ -10,8 +10,6 @@ import Contact from "../Pages/Contact/contact";
 const Stack = () => {
   return (
     <Router>
-      <ScrollToTop />
-      <LiveChat />
       <Routes>
         {/* Route Definitions */}
         <Route path="/" element={<Home />} />

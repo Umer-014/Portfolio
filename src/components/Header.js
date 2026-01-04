@@ -1,6 +1,8 @@
-import { useState } from "react";
+import React,{ useState } from "react";
 import "./Header.css";
-import logo from "../assets/logo.png"; // adjust if name is different
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,12 +19,12 @@ const Header = () => {
 
         {/* Navigation */}
         <nav className={`nav ${menuOpen ? "open" : ""}`}>
-          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#skills" onClick={() => setMenuOpen(false)}>Skills</a>
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-          <a href="#CV" onClick={() => setMenuOpen(false)}>CV</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/skills" onClick={() => setMenuOpen(false)}>Skills</Link>
+          <Link to="/projects" onClick={() => setMenuOpen(false)}>Projects</Link>
+          <Link to="/cv" onClick={() => setMenuOpen(false)}>CV</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
         </nav>
 
         {/* Mobile Menu */}
