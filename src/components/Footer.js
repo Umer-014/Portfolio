@@ -4,13 +4,33 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <p>© {new Date().getFullYear()} Muhammad Umer Riaz</p>
+        <div className="footer-brand">
+          <h3>Muhammad Umer Riaz</h3>
+          <p>Frontend Developer • React • UI Focused</p>
+        </div>
 
         <div className="footer-links">
-          <a href="https://github.com/" target="_blank">GitHub</a>
-          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-          <a href="#contact">Contact</a>
+          <a
+            href="https://github.com/umer-014/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a href="/contact">Contact</a>
         </div>
+      </div>
+
+      <div className="footer-bottom">
+        © {new Date().getFullYear()} All rights reserved
       </div>
     </footer>
   );
